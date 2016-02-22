@@ -53,7 +53,11 @@ public class CalculatorTest {
 	@Test
 	public void testGetHistory() {
 		Calculator calc = new Calculator();
-		assertEquals("", calc.getHistory());
+		calc.add(20);
+		calc.subtract(5);
+		calc.multiply(2);
+		calc.divide(10);
+		assertEquals("0 + 20 - 5 * 2 / 10", calc.getHistory());
 	}
 
 }
